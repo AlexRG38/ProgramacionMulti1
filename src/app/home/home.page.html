@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Muxo Betih
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Muxo Betih</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Himno del Betih</strong>
+    <p>Ole ole ole beti ole(X5) <a target="_blank" rel="noopener noreferrer" href="https://www.realbetisbalompie.es/">Hazte DiaBETICO</a></p>
+  </div>
+
+  
+<table border="3">
+
+  <Thead>
+
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>DNI</th>
+    </tr>
+
+  </Thead>
+
+  <Tbody>
+    <tr *ngFor="let elemento of personas">
+      <td>{{elemento.nombre}}</td>
+      <td>{{elemento.apellido}}</td>
+      <td>{{elemento.dni}}</td>
+    </tr>
+  </Tbody>
+
+
+</table>
+
+<!-- List of Text Items -->
+<ion-list>
+  <ion-item *ngFor="let element of elementos">
+    <ion-icon [name]="element.icono"></ion-icon>
+    <ion-button color="primary" [routerLink]="element.ruta">{{element.titulo}}</ion-button>
+  </ion-item>
+</ion-list>
+
+</ion-content>
